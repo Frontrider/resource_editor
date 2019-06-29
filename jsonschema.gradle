@@ -1,0 +1,7 @@
+jsonSchema2Pojo {
+    generateBuilders = true
+    source = files("$project.rootDir.absolutePath/src/main/json")
+    sourceType="json"
+    annotationStyle = 'gson'
+
+}

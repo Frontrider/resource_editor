@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="main" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            fx:controller="hu.frontrider.modeleditor.ModelEditor">
+    <padding>
+        <Insets />
+    </padding>
+    <MenuBar AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <Menu mnemonicParsing="false" text="$file">
+            <Menu text="$file_new">
+                <MenuItem text="$file_new_resource_pack" />
+                <MenuItem text="$file_new_data_pack" />
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#openNew" text="Open">
+                <MenuItem mnemonicParsing="false" onAction="#openNewDir" text="Open Directory" />
+                <MenuItem mnemonicParsing="false" onAction="#openNew" text="Open File" />
+            </Menu>
+            <SeparatorMenuItem />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save as" />
+            <SeparatorMenuItem />
+            <MenuItem mnemonicParsing="false" onAction="#closeCurrent" text="Close" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="$edit">
+            <MenuItem mnemonicParsing="false" text="Delete" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="$help">
+            <MenuItem mnemonicParsing="false" text="About" />
+        </Menu>
+    </MenuBar>
+    <ListView fx:id="componentList" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="29">
+
+    </ListView>
+    <Group fx:id="modelView">
+
+    </Group>
+</AnchorPane>
